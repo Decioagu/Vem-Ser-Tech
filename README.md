@@ -1,2 +1,4 @@
 # Vem Ser Tech
- iFood
+ **iFood** - Lista de exercícios
+ ***
+ HTML-CSS

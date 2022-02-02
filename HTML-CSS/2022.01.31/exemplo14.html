@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Form</title>
+</head>
+<body>
+    <form> <!-- formulario -->
+        <div>
+            <label>Nome:</label>
+            <input name="nome" type="text">
+        </div>
+        <div>
+            Senha: <input name="senha" type="password">
+        </div>
+        <div>
+            E-mail: <input name="email" type="email">
+        </div>
+        <div>
+            <!-- caixa de seleção -->
+            Selecione o produto:
+            <select name="produtos">
+                <option>Selecione...</option>
+                <option value="1">Caneta</option>
+                <option value="2">Caderno</option>
+                <option value="3">Lapis</option>
+            </select>
+        </div>
+
+        <br><br>
+        
+        <div>
+            <input type="checkbox" name="vehicle1" value="1">
+            <label for="vehicle1">Caneta</label><br>
+            <input type="checkbox" name="vehicle2" value="2">
+            <label for="vehicle2">Caderno</label><br>
+            <input type="checkbox" name="vehicle3" value="3">
+            <label for="vehicle3">Lapis</label><br><br>
+            <input type="submit" value="Submit">
+        </div>
+
+        <br><br>
+
+        <div>            
+            <input type="radio" name="fav_language" value="1" checked="checked">
+            <label for="vehicle1">Caneta</label><br>
+            <input type="radio" name="fav_language" value="2">
+            <label for="vehicle2">Caderno</label><br>
+            <input type="radio" name="fav_language" value="3">
+            <label for="vehicle3">Lapis</label><br><br>
+            <input type="submit" value="Submit">
+        </div>
+
+        <br><br>
+
+        <div>
+            <!-- caixa de texto para usuario -->
+            <br>
+            <label>Fale sobre vc:</label> 
+            <br>
+            <textarea name="texto" cols="50" rows="3">
+                 Isso é um texto
+            </textarea>
+        </div>
+        <div>
+            <br>
+            <input name="reset" type="reset" value="limpar">
+            <input name="submit" type="submit" value="submeter">
+        </div>
+
+
+    </form>
+</body>
+</html>

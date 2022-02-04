@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formatação de texto</title>
+    <style>
+        marck{
+            background-color:greenyellow /* cor para marcador */
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatação de texto</h1>
+    <p>Texto em <b>negrito</b></p> <!-- ainda em uso -->
+    <p>Texto em <strong>destaque</strong></p> <!-- novo formato -->
+    <br>
+    <p>Texto em <i>itálico</i></p> <!-- ainda em uso -->
+    <p>Texto em <em>ênfase</em></p> <!-- novo formato -->
+    <br>
+    <p>Texto <u>sublinhado</u></p> <!-- ainda em uso -->
+    <p>Texto <ins>incluido</ins></p> <!-- novo formato -->
+    <br>
+    <p>Texto <del>excruido</del></p> <!-- novo formato -->
+    <br>
+    <br>
+    <p>Texto <marck>marcado</marck></p> <!-- novo formato -->
+    <br>
+    <p>Texto <small>pqueno</small></p> <!-- ainda em uso -->
+    <br>
+    <p>X<sup>2</sup></p> 
+    <p>H<sub>2</sub>O</p> 
+    <br>
+    <h2>Código fonte</h2>
+    <p>O comando documento.getElementeById('teste') é escrito em liguagem JavaScript</p>
+    <p>O comando <code>documento.getElementeById('teste')</code> é escrito em liguagem JavaScript</p> <!-- mono-espaçamento -->
+    <br>
+    <code> <!-- não formatado -->
+        num = int(input('Didite um número:'))
+        if num % 2 == 0:
+            print(f'O número {num} é PAR')
+        else:
+            print(f'O número {num} é IMPAR')
+        print('Fim...')
+    </code>
+    <pre> <!-- texto pré formatado -->
+        <code>
+            num = int(input('Didite um número:'))
+            if num % 2 == 0:
+                print(f'O número {num} é PAR')
+            else:
+                print(f'O número {num} é IMPAR')
+            print('Fim...')
+        </code>
+    </pre>
+    <br>
+    <h2>Citação</h2>
+    <p>Como diria o pai de um amigo meu: <q>O computador é um burro muito rápido!</q></p> <!-- citação -->
+    <h2>Citação completa</h2>
+    <blockquote cite="https://developer.mozilla.org/pt-BR/docs/Web/HTML"> <!-- cria uma referência para logaritimo de busca na internet -->
+        HTML (Linguagem de Marcação de HiperTexto) é o bloco de construção mais básico da web. Define o significado e a estrutura do conteúdo da web. Outras tecnologias além do HTML geralmente são usadas para descrever a aparência/apresentação (CSS) ou a funcionalidade/comportamento (JavaScript) de uma página da web.
+    </blockquote>
+    <br>
+    <h2>Abreviação</h2>
+    <p>Estou estudando <abbr title="Linguagem de Marcação de HiperTexto">HTML</abbr>.</p>
+    <h2>Texto invertido</h2>
+    <p><bdo dir="rtl">Décio Santana de Aguiar</bdo></p> <!-- texto invertido -->
+    <p><bdo dir="ltr">Décio Santana de Aguiar</bdo></p> <!-- normal -->
+
+</body>
+</html>

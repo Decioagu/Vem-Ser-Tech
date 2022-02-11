@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem centralizada</title>
+    <style>
+        body {
+            background:#132e4c;
+        }
+        .caixa {
+            height: 200px;
+            width: 200px;
+            background:#ffffff;
+        }
+        .container {
+	        display: flex;
+         }
+        .center {
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+        	align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="container center">
+        <figure class="caixa"><img src="idea.png" alt="Imagem lâmpada"></figure>
+    </section>
+</body>
+</html>
+
+<!-- Linhas 21 e 22: definimos as dimensões do container como 100% da largura (width) e altura (height) da página. Para isso, utilizamos as unidades vw e vh das CSS3, que representam, respectivamente, a largura e a altura da viewport; -->
+<!-- Linha 23 (justify-content: center;): configuramos a disposição dos elementos internos como centralizados na direção definida na propriedade anterior, ou seja, os itens ficarão no centro da linha (horizontalmente); -->
+<!-- Linha 25 (align-items: center;): com a propriedade align-items definida como center, fazemos com que os elementos internos sejam também alinhados na vertical; -->

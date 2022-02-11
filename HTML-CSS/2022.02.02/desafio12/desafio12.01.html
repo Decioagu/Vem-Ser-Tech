@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagem centralizada</title>
+    <style>
+        body {
+            background:#132e4c;
+        }
+
+        .container {
+	        display: flex;
+         }
+
+        .center {
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+        	align-items: center;
+        }
+
+        .caixa{
+            height: 50px;
+            width: 150px;
+            background-image: linear-gradient(90deg, #FDFDFD, #DEDEDE);
+            text-align: center;
+            border-radius: 45%;
+        }
+
+        .alt_caixa{
+            top:15px;
+        }
+
+        .texto {
+            color: #3D3D3D;
+            font-family: sans-serif;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="container center">
+        <elementos class="caixa">
+            <p class="alt_caixa">
+                <a href="https://br.linkedin.com/in/decioaguiar" target="_blank">
+                    <button type="button" class="texto">SAIBA MAIS</button>
+                </a>
+            </p>
+        </elementos>
+    </div>
+
+</body>
+</html>

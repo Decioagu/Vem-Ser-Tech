@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {
+    background-color: rgb(66, 66, 66);
+    font-family: Arial;
+    font-size: 2em; /* dobra o tamanho de todo o corpo */
+    color: white;
+}
+
+h1{
+    color: blue;
+    text-decoration: underline; /* sublinhar */
+}
+
+.verde {
+font-size: 64px;
+color:green
+}
+
+.vermelho {
+font-size: 2em;
+color:red
+}
+
+.azul {
+font-size: 200%;
+color:blue
+}
+
+div ul li {
+    color: yellow;
+    list-style-type:none;
+    text-align: start;
+}
+
+.chocolate {
+    color: chocolate;
+    list-style-type:none;
+}
+p{
+    text-align: center;
+}
+a {
+    color:black;
+}

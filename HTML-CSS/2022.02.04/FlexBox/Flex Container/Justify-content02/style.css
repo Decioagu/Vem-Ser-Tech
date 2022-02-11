@@ -1,0 +1,67 @@
+/* justify-content: space-around;
+Divide os elementos dentro do container em espaços iguais incluindo parede do contener. */
+.space-around {
+	justify-content: space-around;
+}
+
+/* justify-content: space-between;
+Divide os elementos dentro do container em espaços iguais, levando em conta somente os elementos. */
+.space-between {
+	justify-content: space-between;
+}
+
+/* justify-content: center;
+Alinha os itens ao centro do container. */
+.center {
+	justify-content: center;
+}
+
+/* justify-content: flex-start;
+Alinha os itens ao início do container. */
+.flex-start {
+	justify-content: flex-start;
+}
+
+/* justify-content: flex-end;
+Alinha os itens ao final do container */
+.flex-end{
+	justify-content: flex-end;
+}
+
+/*  flex-direction: column;
+Os itens ficam em uma única coluna, um embaixo do outro. */
+.column {
+	min-height: 200px;
+	flex-direction: column;
+}
+
+/* CAIXA */
+.container {
+	display: flex;
+	max-width: 500px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	padding: 0 10px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}

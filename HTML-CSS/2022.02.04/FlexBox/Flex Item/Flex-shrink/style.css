@@ -1,0 +1,76 @@
+/* flex-shrink: 1;
+Valor padrão, permite que os itens tenham os seus tamanhos (seja esse tamanho definido a partir de width ou flex-basis) reduzidos para caber no container.
+
+flex-shrink: 0;
+Não permite a diminuição dos itens, assim um item com flex-basis: 300px; nunca diminuirá menos do que 300px, mesmo que o conteúdo não ocupe todo esse espaço.
+
+flex-shrink: número;
+Um item com shrink: 3 diminuirá 3 vezes mais que um item com 1. */
+.shrink-1 {
+	flex-grow: 1;
+	flex-shrink: 1;
+}
+
+.shrink-3 {
+	flex-grow: 1;
+	flex-shrink: 3;
+}
+
+.shrink-1-basis {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 150px;
+}
+
+.shrink-0-basis {
+	flex-grow: 1;
+	flex-shrink: 0;
+	flex-basis: 150px;
+}
+
+.shrink-3-basis {
+	flex-grow: 1;
+	flex-shrink: 3;
+	flex-basis: 150px;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}
+
+/* display: flex;
+Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+.container {
+	display: flex;
+	max-width: 420px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 20px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+/* align-items: stretch;
+Valor padrão, as caixas dos elementos tem o mesmo tamanho no container (altura). */
+.stretch {
+	align-items: stretch;
+}
+/* align-items: flex-start;
+Alinha os itens ao início. */
+.flex-start {
+	align-items: flex-start;
+}
+/* align-items: flex-end;
+Alinha os itens ao final. */
+.flex-end {
+	align-items: flex-end;
+}
+/* align-items: center;
+Alinha os itens ao centro. */
+.center {
+	align-items: center;
+}
+/* align-items: baseline;
+Alinha os itens de acordo com a linha base da tipografia. */
+.baseline {
+	align-items: baseline;
+}
+/* flex-direction: column;
+Os itens ficam em uma única coluna, um embaixo do outro. */
+.column {
+	flex-direction: column;
+}
+
+
+/* display: flex;
+Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+.container {
+	display: flex;
+	max-width: 350px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	padding: 0 10px; /*  distância entre o conteúdo de um elemento e suas bordas.  */
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}
+
+/* define altura do container */
+.alinhamento-central {
+	height: 350px;
+	justify-content: center;
+	align-items: center;
+}
+
+/* define posição e caixa de texto no container */
+.alinhamento-central .item {
+	flex: 0; /*  define como um ítem será posicionado para no espaço disponível dentro de seu container. */
+	padding: 10px;
+	padding-top: 20px;
+}
+
+.caixa {
+	max-width: 420px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+

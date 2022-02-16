@@ -1,0 +1,68 @@
+/* 
+order: número;
+Número para modificar a ordem padrão. Pode ser negativo.
+
+order: 0;
+0 é o valor padrão e isso significa que a ordem dos itens será a ordem apresentada no HTML. Se você quiser colocar um item do meio da lista no início da mesma, sem modificar os demais, o ideal é utilizar um valor negativo para este item, já que todos os outros são 0.
+*/
+
+.order1 {
+	order: 1;
+}
+
+.order2 {
+	order: 2;
+}
+
+.order3 {
+	order: 3;
+}
+
+.order4 {
+	order: 4;
+}
+
+.order-1 {
+	order: -1;
+}
+
+.flex-grow {
+	flex-grow: 1;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}
+
+
+
+

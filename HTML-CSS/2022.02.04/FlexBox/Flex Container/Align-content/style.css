@@ -1,0 +1,71 @@
+.stretch {
+	align-content: stretch;
+}
+
+.flex-start {
+	align-content: flex-start;
+}
+
+.flex-end {
+	align-content: flex-end;
+}
+
+.center {
+	align-content: center;
+}
+
+.space-between {
+	align-content: space-between;
+}
+
+.space-around {
+	align-content: space-around;
+}
+/* flex-direction: column;
+Os itens ficam em uma única coluna, um embaixo do outro. */
+.column {
+	flex-direction: column;
+}
+
+
+/* display: flex;
+Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+.container {
+	display: flex;
+	max-width: 420px;
+	height: 300px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+	flex-wrap: wrap;
+}
+
+/* Flex Item */
+.item {
+	flex: 1; /*  define como um ítem será posicionado para no espaço disponível dentro de seu container. */
+	margin: 5px;
+	padding: 0 10px; /*  distância entre o conteúdo de um elemento e suas bordas.  */
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.caixa {
+	max-width: 420px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}

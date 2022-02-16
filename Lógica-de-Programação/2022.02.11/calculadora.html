@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <hr>
+    <label for="">1º número</label>
+    <!-- placeholde="0" <=> insere valores numéricos no campo para usuário -->
+    <!-- type="number" <=> só é possivel inserir valores numéricos -->
+    <input type="text" id="num1" autofocus> <!-- "autofocus" caixa fica elecionada  -->
+    <br><br>
+    <label for="">2º número</label>
+    <input type="text" id="num2">
+
+    <!-- gatilho para JavaScript -->
+    <button onclick="calcular()">Calcular</button>
+    <hr>
+    <label for="">Resultado:</label>
+    <input type="text" id="resultado" value=0>
+    <hr>
+
+    <script src="calculadora.js"></script>
+</body>
+</html>

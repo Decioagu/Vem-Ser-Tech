@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flex Container</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Flex-grow</h1>
+
+	<div class="container">
+		<p>
+			Define a habilidade de um flex item crescer. Por padrão o valor é zero, assim os flex itens ocupam um tamanho máximo relacionado o conteúdo interno deles ou ao width definido.
+			<br>
+			Ao definir 1 para todos os Flex Itens, eles tentarão ter a mesma largura e vão ocupar 100% do container. Digo tentarão pois caso um elemento possua um conteúdo muito largo, ele irá respeitar o mesmo.
+			<br>
+			Se você tiver uma linha com quatro itens, onde três são flex-grow: 1 e um flex-grow: 2, o flex-grow: 2 tentará ocupar 2 vezes mais espaço extra do que os outros elementos.
+			<br>
+			OBS: justify-content não funciona em items com flex-grow definido.
+		</p>
+	</div>
+
+	<h2>container | item | grow_0</h2>
+	<section class="container">
+		<div class="item grow_0">1</div>
+		<div class="item grow_0">2</div>
+		<div class="item grow_0">3</div>
+	</section>
+
+	<h2>container | item | grow_1</h2>
+	<section class="container">
+		<div class="item grow_1">1</div>
+		<div class="item grow_1">2</div>
+		<div class="item grow_1">3</div>
+	</section>
+
+	<h2>container | column | item | grow_2</h2>
+	<section class="container column">
+		<div class="item grow_2">1</div>
+		<div class="item grow_2">2</div>
+		<div class="item grow_2">3</div>
+	</section>
+
+	<h2>container | column-reverse | item | grow_1</h2>
+	<section class="container column-reverse">
+		<div class="item grow_1">1</div>
+		<div class="item grow_1">2</div>
+		<div class="item grow_1">3</div>
+	</section>
+
+	<h2>container | column-reverse | item | grow_0 | grow_1 | grow_2</h2>
+	<section class="container column-reverse">
+		<div class="item grow_0">1</div>
+		<div class="item grow_1">2</div>
+		<div class="item grow_2">3</div>
+	</section>
+	
+</body>
+
+</html>

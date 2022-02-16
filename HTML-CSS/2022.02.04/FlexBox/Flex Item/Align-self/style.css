@@ -1,0 +1,75 @@
+/* 
+align-self: auto;
+// Valor inicial padrão. Vai respeitar o que for definido pelo align-items no flex-container.
+*/
+
+/* align-self: flex-start;
+Alinha o item ao início. */
+.flex-start {
+	align-self: flex-start;
+}
+/* align-self: flex-end;
+// Alinha o item ao final. */
+.flex-end {
+	align-self: flex-end;
+}
+/* align-self: center;
+Alinha o item ao centro. */
+.center {
+	align-self: center;
+}
+/* align-self: baseline;
+Alinha o item a linha de base. */
+.baseline {
+	align-self: baseline;
+}
+/* align-self: stretch;
+Estica o item. */
+.stretch {
+	align-self: stretch;
+}
+
+.align-items {
+	align-items: flex-end;
+}
+
+.column {
+	flex-direction: column;
+}
+
+.container {
+	display: flex;
+	max-width: 400px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	flex: 1;
+	margin: 5px;
+	padding: 0 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+.item:first-child {
+	padding-top: 20px;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+

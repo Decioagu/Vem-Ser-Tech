@@ -1,0 +1,46 @@
+/* Os itens não se expandem para ocupar o container. */
+.grow_0 {
+	flex-grow: 0;
+}
+
+/* Os itens se expandem igualmente para ocupar o container. Utilizando apenas o flex-grow, o crescimento é distribuído igualmente antes e depois do conteúdo de cada elemento. (pois por padrão o flex-basis é auto) */
+.grow_1 {
+	flex-grow: 1;
+}
+
+/* Os itens se expandem duas vezes mais que aqueles com flex-grow: 1; */
+.grow_2 {
+	flex-grow: 2;
+}
+
+
+/* display: flex;
+Torna o elemento um flex container automaticamente transformando todos os seus filhos diretos em flex itens. */
+.container {
+	display: flex;
+	max-width: 420px;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
+}
+
+/* Flex Item */
+.item {
+	margin: 5px;
+	background: tomato;
+	text-align: center;
+	font-size: 1.5em;
+}
+
+h2 {
+	margin: 10px 0 0 0;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+body {
+	background: rgb(77, 156, 146);
+	font-family: monospace;
+	color: #333;
+	text-align: center;
+}

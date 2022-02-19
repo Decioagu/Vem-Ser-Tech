@@ -7,11 +7,29 @@
     <title>Exemplo de link</title>
 </head>
 <body>
+    <h1>Pagina principal</h1>
+    <hr>
+
+    <h2>Link do linkedin</h2>
+    <!-- (hreflang="en")indica qual é o idioma principal do site para onde o link está desviando o fluxo  -->
+    <!-- ( rel="" mecanismo de busca internet "next"<=>pagina interna; "externo"<=>pagina externa; "nofollon"<=>não seguir ) -->
+    <a href="https://br.linkedin.com/in/decioaguiar" target="_blank" hreflang="en" rel="externo">Linkedin</a> 
+
     <h2>Link detro do nosso site</h2>
-    <a href="exemplo09.html" target="_self">Meu PC1</a>
+    <!-- (target="_self") vai abrir o link na janela atual (padrão) -->
+    <a href="exemplo09.html" target="_self" rel="next">Meu PC1</a> 
+
     <h2>Link do GitHub</h2>
-    <a href="https://github.com/Decioagu" target="_blank">Link do GitHub</a>
+    <!-- (target="_blank") vai abrir o link em uma nova janela em branco -->
+    <a href="https://github.com/Decioagu" target="_blank" rel="externo">Link do GitHub</a> 
+
     <h2>Link detro do nosso site</h2>
-    <a href="exemplo08.html" target="_parent">Meu PC2</a>
+    <a href="exemplo08.html" target="_parent" rel="next">Meu PC2</a> 
+
+    <h2>Link para download</h2>
+    <a href="arquivos/decio.pdf" download="decio.pdf" type="application/pdf">Baixe PDF</a>
+    <br>
+    <a href="arquivos/decio.zip" download="decio.zip" type="application/zip">Baixe arquivo ZIP</a>
+
 </body>
 </html>

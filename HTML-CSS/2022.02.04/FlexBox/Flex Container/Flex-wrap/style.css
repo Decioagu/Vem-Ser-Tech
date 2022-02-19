@@ -22,6 +22,7 @@ Quebra a linha assim que um dos flex itens não puder mais ser compactado. A que
 	max-width: 350px;
 	margin: 0 auto;
 	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
 }
 /* Flex Item */
 .item {

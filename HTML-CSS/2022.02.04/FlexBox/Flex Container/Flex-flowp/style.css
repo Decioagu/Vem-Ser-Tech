@@ -20,6 +20,7 @@ Coloca o conteúdo em coluna, não permite a quebra de linha. */
 	max-width: 320px;
 	margin: 0 auto;
 	border: 1px solid #ccc;
+	background: rgb(255, 255, 255);
 }
 /* Flex Item */
 .item {

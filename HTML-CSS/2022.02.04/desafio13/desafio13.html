@@ -4,42 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Desafio13</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="flex-container">
-        <h1>Quem eu sou?</h1>
-        <ol class="menu">
-            <li>Formação</li>
-            <li>Lista de cursos</li>
-        </ol>
-    </header>
+    
 
-    <div>
-        <section class="grid">
-            <div class="item main">
-                <p>
-                    Profissional com experiência na indústria, com passagem nas áreas de qualidade, consultoria e engenharia, atuando em analise e elaboração de desenho técnico, auditorias, elaboração de plano de ação e laudo técnico, buscando novos desafios na área de tecnologia, para aprimorar meus conhecimentos e compartilhar experiências.
-                </p>
-            </div>
-            <div class="item sidenav">
-                <img src="decio.png" alt="Foto pessoal">
+    <section class="grid grid-template-areas">
+
+        <aside class="item aside">
+            <div class="flex flexColuna">
+                <h1>Quem eu sou?</h1>
+                <picture>
+                    <source media="(max-width: 1000px)" srcset="decio180.png">
+                    <img src="decio250.png" alt="Imagem minha foto" style="width:auto;">
+                </picture>
                 <h2>Décio Santana de Aguiar</h2>
-                <figure class="caixa">
-                    <img src="idea.png" alt="Imagem lâmpada" onmouseover="this.src='idea-hover.png'" onmouseout="this.src='idea.png'">
-                </figure>
-                <figure class="caixa">
-                    <img src="idea.png" alt="Imagem lâmpada" onmouseover="this.src='idea-hover.png'" onmouseout="this.src='idea.png'">
-                </figure>
-                <figure class="caixa">
-                    <img src="idea.png" alt="Imagem lâmpada" onmouseover="this.src='idea-hover.png'" onmouseout="this.src='idea.png'">
-                </figure>
             </div>
-            <div class="item footer">Quer saber mais?</div>
+            <h2>Contatos:</h2>
+            <figure >
+                <a href="https://api.whatsapp.com/send?phone=5521995257800&text=Ol%C3%A1!%20Deixe%20sua%20mensagem%20e%20eu%20retornarei." target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-celular-cinza.png" alt="Icone celular" onmouseover="this.src='icone-celular-preto.png'" onmouseout="this.src='icone-celular-cinza.png'">
+                    &nbsp;&nbsp;(21)995257800
+                </a>
+            </figure>
+            
+            <figure >
+                <a href="https://api.whatsapp.com/send?phone=5521995257800&text=Ol%C3%A1!%20Deixe%20sua%20mensagem%20e%20eu%20retornarei." target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-whatsapp-cinza.png" alt="Icone Whatsapp" onmouseover="this.src='icone-whatsapp-preto.png'" onmouseout="this.src='icone-whatsapp-cinza.png'">
+                    &nbsp;&nbsp;WhatsApp
+                </a>
+            </figure>
+            
+            <figure class="flex">
+                <a href="https://t.me/DecioAgu" target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-telegram-cinza.png" alt="Icone Telegram" onmouseover="this.src='icone-telegram-preto.png'" onmouseout="this.src='icone-telegram-cinza.png'">
+                    &nbsp;&nbsp;Telegram
+                </a>                    
+            </figure>
+        </aside>
+
+        <header class="item header texCentro">
+            <br>
+            <strong>Lista de cursos:</strong>
+            <select class="texStyle">
+                <option>Listagem...</option>
+                <option value="1">Web Full Stack - Vem Ser Tech | iFood - Let`s Code (em andamento)</option>
+                <option value="2">PCAP Programming Essentials in Python - CISCO (2022)</option>
+                <option value="3">Introdução à Ciência da Computação Python Parte [1] - COURSERA (2021)</option>
+                <option value="4">Python 3 - Mundo [1, 2 e 3] – Curso em Video (2021)</option>
+                <option value="5">CLP básico - Hebel automação (2021)</option>
+                <option value="6"> Maquinas e Comandos Elétricos – Sala da Elétrica (2017)</option>
+                <option value="7">Leitura e Interpretação de Diagramas Elétricos – Sala da Elétrica (2017)</option>
+                <option value="8">Instalações Elétricas Residência – Sala da Elétrica (2017)</option>
+                <option value="9">Eletricidade Geral – Sala da Elétrica (2017)</option>
+                <option value="10">NR 12 Segurança no Trabalho em Máquinas e Equipamentos – Educa (2017)</option>
+                <option value="11">NR 10 Segurança em Instalações e Serviços com Eletricidade – EngeHall (2016)</option>
+                <option value="12">ISO 14001 – Portal Educação (2016)</option>
+                <option value="13">ISO 9001 - Sistema de Gestão da Qualidade – Portal Educação (2016)</option>
+                <option value="14">Excel avançado – ADV Informática Avançada (2015)</option>
+                <option value="15">SolidWorks – Cadalist Informática Ltda (2014)</option>
+                <option value="16">Pneumática Básica - SENAI (2011)</option>
+                <option value="17">AutoCad – Escola Técnica do Rio de Janeiro (2002)</option>                                       
+            </select>
+        </header>
+
+        <main class="item main">
+            <p class="texJustificado">
+                <br><br>
+                Profissional com experiência na indústria, com passagem nas áreas de qualidade, consultoria e engenharia, atuando em analise e elaboração de desenho técnico, auditorias, elaboração de plano de ação e laudo técnico, buscando novos desafios na área de tecnologia, para aprimorar meus conhecimentos e compartilhar experiências.
+            </p>  
+        </main>
+
+        <section class="item section">
+            <br>
+            <p><strong>Formação:</strong></p>
+            <ul>
+                <li>Pós-Graduação em Big Data, pela Faculdade Descomplica (Cursando)</li>
+                <li>MBA em Segurança da Informação, pela Faculdade Descomplica (Cursando)</li>
+                <li>Graduação em Engenharia de Controle e Automação, pela Universidade Estácio de Sá (2018)</li>
+                <li>Graduação Tecnologia em Automação Industrial, pela Universidade Estácio de Sá (2011)</li>
+                <li>Técnico em Eletrônica, pela Escola Técnica do Rio de Janeiro (2003)</li>
+            </ul>
         </section>
-    </div>
+    
+        <footer class="item footer">
+            <h1>Quer saber mais?</h1>
+            <br>
+            <figure>
+                <a href="https://br.linkedin.com/in/decioaguiar" target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-linkedin-cinza.png" alt="Icone Linkedin" onmouseover="this.src='icone-linkedin-preto.png'" onmouseout="this.src='icone-linkedin-cinza.png'">
+                    &nbsp;&nbsp;Linkedin
+                </a>
+            </figure>
+            <br>
+            <figure>
+                <a href="https://github.com/Decioagu" target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-guihub-cinza.png" alt="Icone GitHub" onmouseover="this.src='icone-guihub-preto.png'" onmouseout="this.src='icone-guihub-cinza.png'">
+                    &nbsp;&nbsp;GitHub
+                </a>                
+            </figure>
+            <br>
+            <figure>
+                <a href="email.html" target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-email-cinza.png" alt="Icone Email" onmouseover="this.src='icone-email-preto.png'" onmouseout="this.src='icone-email-cinza.png'">
+                    &nbsp;&nbsp;decioagu@gmail.com
+                </a>
+            </figure>                
+            <br>
+            <figure>                    
+                <a href="https://www.google.com.br/maps/place/Campo+Grande,+Rio+de+Janeiro+-+RJ/@-22.9055875,-43.6363467,11.5z/data=!4m5!3m4!1s0x9be17999363715:0x46c3f27867ad9332!8m2!3d-22.9076515!4d-43.5659121" target="_blank" rel="externo" class="flex flexLinha">
+                    <img src="icone-localizacao-cinza.png" alt="Icone Localizacao" onmouseover="this.src='icone-localizacao-preto.png'" onmouseout="this.src='icone-localizacao-cinza.png'">
+                    &nbsp;&nbsp;Rio de Janeiro
+                </a>
+            </figure>
+        </footer>
+
+    </section>
+    
     
 </body>
 </html>

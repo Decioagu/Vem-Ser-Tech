@@ -9,19 +9,20 @@
 <body>
     <h1>Calculadora</h1>
     <hr>
-    <label for="">1º número</label>
+    <label for="">1º número:</label>
     <!-- placeholde="0" <=> insere valores numéricos no campo para usuário -->
     <!-- type="number" <=> só é possivel inserir valores numéricos -->
-    <input type="text" id="num1" autofocus> <!-- "autofocus" caixa fica elecionada  -->
+    <input type="nunber" id="num1" placeholde="0" autofocus> <!-- "autofocus" caixa fica elecionada  -->
     <br><br>
-    <label for="">2º número</label>
-    <input type="text" id="num2">
-
+    <label for="numero">2º número:</label>
+    <input type="number" id="num2" placeholde="0">
+    
     <!-- gatilho para JavaScript -->
     <button onclick="calcular()">Calcular</button>
     <hr>
-    <label for="">Resultado:</label>
-    <input type="text" id="resultado" value=0>
+    <label for="res">Resultado:</label>
+    <!-- uar "disabled" ou  "disabled" para desabilitar campo de preencimento pelo usuario-->
+    <input type="text" id="resultado"  readonly> 
     <hr>
 
     <script src="calculadora.js"></script>

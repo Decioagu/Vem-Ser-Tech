@@ -11,8 +11,8 @@ console.log(soma(5)); // 5
 console.log(soma(5,10)); // 15
 
 /* função anonima */
-const sum = function (n1=0, n2=0) {
-    return n1 + n2;
+const sum = function (num1=0, num2=0) {
+    return num1 + num2;
 }
 
 console.log(sum); // Ref. Função

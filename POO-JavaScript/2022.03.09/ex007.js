@@ -1,7 +1,7 @@
 // classe
 class CNH {
     // função construtora
-    constructor(pais = '??', idade = 'Não informada', categoria = '"sem resgistro"') {
+    constructor(pais = '??', idade = 'Não informada', categoria = 'SEM RESGISTRO') {
         this.pais = pais.toUpperCase(),
         this.idade = idade,
         this.categoria = categoria.toUpperCase()
@@ -28,9 +28,10 @@ class CNH {
         } else if (this.pais == 'BR'){
             if (this.idade < 18){
                 return `No ${this.pais} com ${this.idade} anos não pode tirar carteira de motorista.`
-            } else if (this.idade >= 18 && this.categoria == ''){ 
-                return `No ${this.pais} com ${this.idade} anos pode tirar carteira de motorista. Faltou cadastro, a categoria esta ${this.categoria}.`
-            } else if (this.idade >= 18 && this.categoria != ''){
+            } else if (this.idade >= 18 && this.categoria == 'SEM RESGISTRO'){ 
+                return `No ${this.pais} com ${this.idade} anos pode tirar carteira de motorista. 
+Faltou cadastrar a categoria, pois esta ${this.categoria}.`
+            } else if (this.idade >= 18 && this.categoria != 'SEM RESGISTRO'){
                 return `No ${this.pais} com ${this.idade} anos pode tirar carteira de motorista de categoria ${this.categoria}.`
             }else { return 'Impossiver responder, faltou idade'}
         } else { return `Imposivel executar o país ${this.pais}, sigla não cadastrada. Lista de cadastro [US, CA, CH, RU e BR]`}
@@ -66,7 +67,7 @@ console.log('//===========================//========================//')
 let BR4 = new CNH('BR');
 console.log(BR4.resposta);
 console.log('//===========================//========================//')
-let BR5 = new CNH('BR', 19);
+let BR5 = new CNH('BR', 19,);
 console.log(BR5.resposta);
 console.log('//===========================//========================//')
 

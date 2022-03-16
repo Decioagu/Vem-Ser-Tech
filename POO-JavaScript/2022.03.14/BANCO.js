@@ -65,7 +65,7 @@ class PF extends Conta{
 class PJ extends PF{
     #CNPJ // propriedade privada
     // função construtora
-    constructor(nome, CPF, conta, agencia, saldo, CNPJ = '', empresa = ''){
+    constructor(nome, CPF, conta, agencia, saldo, CNPJ = 'Sem Cadastro', empresa = 'Sem Cadastro'){
         super (nome, CPF, conta, agencia, saldo)
         this.#CNPJ = CNPJ;
         this.empresa = empresa;

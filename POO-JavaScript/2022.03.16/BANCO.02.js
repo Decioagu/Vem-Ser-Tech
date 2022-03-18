@@ -87,6 +87,7 @@ class Conta {
         } else {
             console.log(`Saldo insuficiente, saque de $R:${valor.toFixed(2)} não efetuado!`)
             console.log(`Saldo atual$ R$:${this.#saldo.toFixed(2)}.`)
+            valor = 0
         }
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Saque", valor)
@@ -95,16 +96,26 @@ class Conta {
     }
 
     // método 
-    transferir (valorDaTranferencia) {
-        if(this.#saldo >= valorDaTranferencia){
-            this.#saldo = this.#saldo - valorDaTranferencia;
-            console.log(`Seu saldo é ${this.#saldo.toFixed(2)} e foi transferido ${valorDaTranferencia.toFixed(2)}`)
+    transferir (valorDaTranferencia, contaDaTransferencia = '') {
+        if(contaDaTransferencia.length != 0){
+            if (this.#saldo <= valorDaTranferencia){
+                console.log(`Saldo insuficiente, transferência não efetuada!`)
+                console.log(`Transferência solicitada de $R:${valorDaTranferencia.toFixed(2)}.`)
+                console.log(`Saldo atual $R:${this.#saldo.toFixed(2)}.`)
+                valorDaTranferencia = 0   
+            } else {
+                this.#saldo = this.#saldo - valorDaTranferencia;
+                console.log(`Transferência de $R:${valorDaTranferencia.toFixed(2)} realizada com sucesso para conta ${contaDaTransferencia}`)
+                console.log(`Saldo atual $R:${this.#saldo.toFixed(2)}.`) 
+            }
 
         } else {
-            console.log(`Saldo insuficiente, transferência não efetuada!`)
-            console.log(`Transferência solicitada de $R:${this.#saldo.toFixed(2)}.`)
-            console.log(`Saldo atual $R:${this.#saldo.toFixed(2)}.`)
+            console.log(`Transferencia não realizada faltou número da conta`)
+            console.log(`Transferência solicitada de $R:${valorDaTranferencia.toFixed(2)}.`)
+            console.log(`Saldo atual $R:${this.#saldo.toFixed(2)}.`)   
+            valorDaTranferencia = 0
         }
+
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Transferência", valorDaTranferencia)
         // armazenar resgistro no Array de "lancamentos"
@@ -119,6 +130,7 @@ class Conta {
         const taxaNdia = 1.025; // Juros composto = "nDias" de atraso
         const nDias = dataVencimento; // dias de atraso de pagamento
         let montante = 0; // variavel para cálculo
+        let valor = 0; // auxilia registro Array "lancamentos"
 
         // pagamento do "valorBoleto"
         if(this.#saldo >= valorBoleto){
@@ -129,9 +141,10 @@ class Conta {
                     this.#saldo -= montante
                     console.log(`Vc pagou R$:${montante} com juros de 1 dia `)
                     console.log(`Juros simples 1% de valor $R:${montante - valorBoleto}`)
+                    valor = montante
                 } else { 
                     console.log(`Saldo insuficiente, valor da fatura R$:${montante} devido atraso de 1 dia do vencimento`)
-                    console.log(`Juros simples 1% de valor $R:${(montante - valorBoleto).toFixed(2)}`)
+                    console.log(`Juros simples 1% de valor $R:${(montante - valorBoleto).toFixed(2)}`) 
                 }
             // condição 2 = 2 dia de atraso
             } else if (nDias == 2) {
@@ -140,9 +153,10 @@ class Conta {
                     this.#saldo -= montante
                     console.log(`Vc pagou R$:${montante.toFixed(2)} com juros de 1 dia `)
                     console.log(`Juros simples 2.5% de valor $R:${(montante - valorBoleto).toFixed(2)}`)
+                    valor = montante
                 } else { 
                     console.log(`Saldo insuficiente, valor da fatura R$:${montante.toFixed(2)} devido atraso de 2 dia do vencimento`)
-                    console.log(`Juros simples 2.5% de valor $R:${(montante - valorBoleto).toFixed(2)}`)
+                    console.log(`Juros simples 2.5% de valor $R:${(montante - valorBoleto).toFixed(2)}`)  
                 }
             // condição 3 = "nDias" dia de atraso
             } else if (nDias >= 3) {
@@ -151,6 +165,7 @@ class Conta {
                     this.#saldo -= montante
                     console.log(`Vc pagou R$:${montante.toFixed(2)} com juros de ${nDias} dia `)
                     console.log(`Juros composto de 2.5% dia valor $R:${(montante - valorBoleto).toFixed(2)}`)
+                    valor = montante
                 } else { 
                     console.log(`Saldo insuficiente, valor da fatura R$:${montante.toFixed(2)} devido atraso de ${nDias} dia do vencimento`)
                     console.log(`Juros composto 2.5% de valor $R:${(montante - valorBoleto).toFixed(2)}`)
@@ -159,13 +174,17 @@ class Conta {
             } else {
                 montante = this.#saldo - valorBoleto;
                 console.log(`Vc pagou R$:${valorBoleto.toFixed(2)} SEM juros!`)
+                valor = montante
             }
         
-        } else { console.log(`Saldo insuficiente, valor da fatura $R:${valorBoleto}.`)}
+        } else { 
+            console.log(`Saldo insuficiente, valor da fatura $R:${valorBoleto}.`)
+            montante = 0 
+        }
         console.log(`Saldo atual$ R$:${this.#saldo.toFixed(2)}.`)
 
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
-        let transacao = this.geraDados(this.nome, "Pagamento", montante)
+        let transacao = this.geraDados(this.nome, "Pagamento", valor)
         // armazenar resgistro no Array de "lancamentos"
         lancamentos.push(transacao);
     }
@@ -267,10 +286,18 @@ console.log(conta2.saldo);
 
 console.log('//=======================================//=======================================//');
 
+conta1.transferir(800, conta2);
+console.log("Depois do Transferir");
+console.log(conta1.saldo);
+console.log(conta2.saldo);
+
+console.log('//=======================================//=======================================//');
+
 console.log(conta1.dados());
 
 console.log(lancamentos);
 console.log('//=======================================//=======================================//');
+conta1.depositar(800);
 console.log(conta1.saldo)
 conta1.pagar(1001, 0);
 conta1.depositar(1);
@@ -299,8 +326,8 @@ conta1.depositar(1000);
 conta1.pagar(1000, 9);
 console.log('//=======================================//=======================================//');
 conta1.transferir(2000)
-conta1.transferir(1000.009)
-console.log(conta1.saldo)
+conta1.transferir(1000, 76603)
+conta1.transferir(400, 76603)
 console.log('//=======================================//=======================================//');
 console.log(lancamentos)
 console.log('//=======================================//=======================================//');

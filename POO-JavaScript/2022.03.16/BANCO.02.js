@@ -71,7 +71,7 @@ class Conta {
         this.#saldo += valor;
         console.log(`${this.nome} Você depositou $R:${valor.toFixed(2)} e seu saldo atual é ${this.#saldo.toFixed(2)}`);
 
-        // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
+        // variavel transacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Depósito", valor)
         // armazenar resgistro no Array de "lancamentos"
         lancamentos.push(transacao);

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carros</title>
+    <style>
+        body {
+            background-color: rgb(101, 185, 241);
+            color: white;
+            font: normal 1.2em Arial;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>CARROS</h1>
+    <label for="">Insira o nome do veículo:</label>
+    <input type="text" id="nome">
+    <button onclick="adicionar()">Adicionar</button>
+    <hr>
+    <p>Quantidade de carros: <span id="res">0</span></p>
+    <hr>
+    <div><span id="lista">Resultado</span></div>
+
+    <script>
+        let carros = []
+        let soma = 0;
+        function adicionar() {
+            let nome = (document.getElementById("nome").value == '')?0:document.getElementById("nome").value;
+            if (nome != 0){
+                soma++;
+                carros.push(nome);
+                document.getElementById('res').innerHTML = soma; 
+                document.getElementById("nome").value = '';
+                console.log(carros)
+                console.log(soma)
+            } else { alert('Prencha o campo abaixo para prossegui');}
+
+            if (soma == 3){
+                document.getElementById('lista').innerHTML = carros
+                //document.getElementById('lista').innerHTML = carros.map(elemento=> `${elemento}<br>`);                
+            }
+        }
+
+    </script>
+</body>
+</html>

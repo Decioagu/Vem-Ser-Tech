@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json</title>
+</head>
+<body>
+    <h1>JSON</h1>
+
+    <script>
+        //Json
+        const carros = [
+            {
+                modelo: "Gol",
+                ano: 2010,
+                cor: "vermelho",
+                situacao: "usado"
+            },
+            {
+                modelo: "Fox",
+                ano: 2015,
+                cor: "preto",
+                situacao: "zero"
+            },
+            {
+                modelo: "Uno",
+                ano: 2000,
+                cor: "verde",
+                situacao: "usado"
+            }
+        ];
+
+        console.log(carros) // Console
+        console.table(carros) // Console
+
+        for(let dados in carros){
+            //Somente com "console.log"
+            console.log(carros[dados])
+        }
+        
+        // valor das chave
+        carros.forEach(function(carro) {
+            document.write(`${carro.modelo} ${carro.cor} / `);
+        });        
+
+        // valor das chave
+        document.write('<br><br>')
+        for(let dados of carros){
+            document.write(
+                `${dados.modelo} /
+                 ${dados.ano} /
+                 ${dados.cor} /
+                 ${dados.situacao}<br>`
+            );
+        }
+
+
+    </script>    
+</body>
+</html>

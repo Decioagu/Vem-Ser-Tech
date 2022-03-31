@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objeto</title>
+</head>
+<body>
+    <h1>OBJETO</h1>
+
+    <script>
+        //Objeto
+        const agenda = {
+            nome: 'Décio',
+            idade: 40,
+            telefone: '2416-1842'
+        }
+        console.table(agenda) // tabela em cosole
+
+        document.write(agenda.telefone); // acesso direto
+
+        document.write('<br><br>');
+        document.write('===Object===');
+        document.write('<br>');
+        document.write(Object.keys(agenda));
+        document.write('<br>');
+        document.write(Object.values(agenda));
+        document.write('<br>');
+        document.write(Object.entries(agenda));
+        document.write('<br><br>');
+        
+        document.write('===forIn===');
+        document.write('<br>');
+        // percorre chave
+        for (chave in agenda) {
+            document.write(chave);
+            document.write('<br>');
+        }
+        document.write('<br><br>');
+        // percorre valor
+        for (chave in agenda) {
+            document.write(agenda[chave]);
+            document.write('<br>');
+        }
+        document.write('<br><br>');
+        // percorre chave e valor
+        for (chave in agenda) {
+            document.write(`${chave}: ${agenda[chave]}`);
+            document.write('<br>');
+        }
+
+        
+        document.write('<br><br>')
+        document.write('===forEach===');
+        document.write('<br>');
+        // percorre chave
+        Object.keys(agenda).forEach(chave=>document.write(chave + '<br>'));
+        document.write('<br><br>')
+        // percorre valor
+        Object.keys(agenda).forEach(valor=>document.write(agenda[valor] + '<br>'));
+        document.write('<br><br>')
+        // percorre chave e valor
+        Object.keys(agenda).forEach(valor=>document.write(`${valor}: ${agenda[valor]}<br>`));
+        document.write('<br><br>')
+        // percorre chave e valor
+        
+
+        document.write('===forOf===');
+        document.write('<br>');
+        for (const chave of Object.keys(agenda)) {
+            document.write(`${chave}<br>`)
+        }
+        document.write('<br><br>')
+        // percorre chave e valor
+        for (const valor of Object.values(agenda)) {
+            document.write(`${valor}<br>`)
+        }
+        document.write('<br><br>')
+        // percorre chave e valor
+        for (const [chave, valor] of Object.entries(agenda)) {
+            document.write(`${chave}: ${valor}<br>`)
+        }
+        document.write('<br><br>')
+
+    </script>    
+</body>
+</html>

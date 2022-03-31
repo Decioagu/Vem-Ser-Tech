@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <h1>ARRAY</h1>
+
+    <script >
+        const lista = [5, 3.5, "banana", null, undefined]; // tipos diferentes de elementos
+        console.log(lista)
+        // corre "lista"
+        for (let index = 0; index < lista.length; index++) {
+            document.write(lista[index], '<br>')
+        } 
+
+        const carros = ['Gol', 'Corsa', 'Fox'];
+        console.log(carros);
+        console.log(carros.length);
+        carros[1] = 'Santana' // substitui elemento na posição especifica do "Array"
+        console.log(carros);
+        console.log(carros[1]); // mostra um elemento do "Array" 
+        console.log(carros);
+        carros.push('Corolla'); // inclui elemento no final do "Array"
+        console.log(carros);
+        carros.unshift('Marea') // inclui elemento no começo do "Array"
+        console.log(carros);
+
+        // carros.splice("posição no Array","quantidade para excluir","subistituição do elemento")
+        carros.splice(1,3,'Fusca') // "na posição 1", "delete 3 elementos em sequancia", "inclua  o ('Fusca')"
+        console.log(carros);
+        carros.splice(1,1,'Gol') // "na posição 1", "delete 1 elemento", "inclua o ('Gol')"  
+        console.log(carros);
+        carros.splice(2,0,'Fusca') // "na posição 2", "não deleta nada", "inclua ('Fusca')"
+        console.log(carros);
+        carros.splice(3,0,'Santana', 'Fox') // "na posição 3", "não deleta nada", "inclua ('Santana', 'Fox')"
+        console.log(carros);
+        carros.splice(2,1) // "na posição 2", "delete 1 elemento"
+        console.log(carros);
+
+        carros.pop(); // elimina o último elemento do "Array"
+        console.log(carros);
+        carros.shift(); // elimina o primeiro elemento do "Array"
+        console.log(carros);
+
+        carros.sort(); // ordena os elementos do "Array" pelo nome
+        console.log(carros);
+        carros.reverse(); // inverte a ordem dentro do "Array"
+        console.log(carros);
+        carros.reverse(); // inverte a ordem dentro do "Array"
+        console.log(carros);   
+
+        let fruta = 'banana' // String
+        console.log(fruta);
+        console.log(fruta.split()); // .split() <=> transforma Strig em um "Array"
+        console.log(fruta);
+        fruta = fruta.split(''); // .split("parametro para divisão") <=> transforma Strig em um "Array"
+        console.log(fruta);
+        console.log(fruta.join()); // .join() <=> transforma Strig em um "Array
+        console.log(fruta);
+        console.log(fruta.join('-')); // .join("parametro para união") <=> transforma Strig em um "Array
+        console.log(fruta);
+        fruta = fruta.join(''); // .join("parametro para união") <=> transforma "Array" em uma String
+        console.log(fruta);
+    </script>
+    
+</body>
+</html>

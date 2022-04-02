@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja de carros</title>
+    <style>
+        body {
+            background-color: rgb(101, 185, 241);
+            color: white;
+            font: normal 1.2em Arial;
+            
+        }
+        table, th, td{
+            border: 1px solid rgb(18, 153, 194);
+            border-collapse: collapse;
+            text-align: center;
+        }
+        th, td {
+            background-color: #024a4d;
+        }
+    </style>
+</head>
+<body>
+    <h1>LOJA DE CARROS</h1>
+
+    <label for="">Modelo:</label>
+    <input type="text" id="modelo">
+
+    <br><br>
+
+    <label for="">Ano:</label>
+    <input type="number" id="ano">
+
+    <br><br>
+
+    <label for="">Cor:</label>
+    <input type="color" id="cor">
+
+    <br><br>
+    
+    <label for="">Situação:</label>
+    <select name="" id="situação">
+        <option value="novo">Novo</option>
+        <option value="usado">Usado</option>
+    </select>
+    
+    <button onclick="adicionar()">Adicionar</button>
+    <hr>
+    
+    <table  style="width: 100%">
+        <thead> 
+            <tr>
+                <th>Modelo</th>
+                <th>Ano</th>
+                <th>Cor</th>
+                <th>Situação</th>
+            </tr>
+        </thead> 
+        <tbody id="tabela">
+            <tr>
+                <td colspan="4">Não existe veículos cadastrado...</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        let carros = [] // Array "carros" não reinicia coma função
+        let soma = 0;
+        function adicionar() {
+            //entrada
+            const modelo = (document.getElementById("modelo").value == '')?'Não cadastro':document.getElementById('modelo');
+            const ano = (document.getElementById("ano").value == '')?'Não cadastro':document.getElementById('ano');
+            const cor = document.getElementById("cor");
+            const situação = document.getElementById("situação");
+
+            console.log(modelo.value, ano.value, cor, situação)
+            
+            //processamento
+            const carro = { //Objeto "carro"
+                modelo: modelo.value,
+                ano: ano.value,
+                cor: cor.value,
+                situação: situação.value
+            }
+            carros.push(carro);// Objeto "carro" será salvo no Array "Carros" 
+
+            //saida
+            console.table(carros);
+
+            const tabela = document.getElementById('tabela');
+            
+
+            
+            tabela.innerHTML = carros.map(function (valor) {    
+                valor = `<tr>
+                    <th>${valor.modelo}</th>
+                    <th>${valor.ano}</th>
+                    <th>${valor.cor}</th>
+                    <th>${valor.situação}</th>
+                </tr>`
+                return valor
+            }).join('')
+                
+        }
+
+    </script>
+</body>
+</html>

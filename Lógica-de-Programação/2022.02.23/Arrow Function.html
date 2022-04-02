@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>ARROW FUNCITION</h1>
+    <script>
+    // Array
+    const cores = ['verde', 'amarelo', 'rosa', 'azul', 'preto']
+    
+    // Arrow Function
+    cores.forEach((nome, posição) => document.write(`cor: ${nome} na posição => ${posição}<br>`));
+
+    /* 
+    Uma expressão de função de seta é uma alternativa compacta a uma expressão de função tradicional , mas é limitada e não pode ser usada em todas as situações.
+
+    Diferenças e Limitações:
+
+    Não tem suas próprias ligações para thisou super, e não deve ser usado como methods.
+    Não possui palavra- new.targetchave.
+    Não é adequado para call, applye bindmétodos, que geralmente dependem do estabelecimento de um escopo .
+    Não podem ser usados ​​como construtores .
+    Não pode usar yield, dentro de seu corpo.
+    */
+    document.write('<hr>')
+    const materials = ['Hydrogen', 'Helium', 'Lithium', 'Beryllium'];
+    document.write(materials.map(material => material.length, '<br>'));
+    document.write('<hr>')
+    document.write(materials.map(material => material, '<br>'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Loop For</title>
+</head>
+<body>
+    <h1>ARROY LOOP FOR</h1>
+    <script>
+    // Array
+    const cores = ['verde', 'amarelo', 'rosa', 'azul', 'preto']
+    document.write(`Array = [${cores}]`)
+    document.write('<br><br>')
+    // mostra posição pelo index do Array
+    for (let index = 0; index < cores.length; index++) {
+        const element = cores[index];
+        document.write(`${element}<br>`)
+    }
+    document.write('<br><br>')
+
+    
+    const matriz = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    document.write(`Matriz<br>[1, 2, 3], <br>[4, 5, 6],<br>[7, 8, 9]`)
+    document.write(`<br><br>`)
+    // percorre linha da matriz
+    for (let linha = 0; linha < matriz.length; linha++) {
+        const element = matriz[linha];
+        document.write(`${element}<br>`)
+    }
+    document.write('<br>')
+    // percorre posição individualmente elemento da matriz
+    for(let lista = 0; lista < matriz.length; lista++){
+            for(let coluna = 0; coluna < matriz[lista].length; coluna++){
+                document.write(matriz[lista][coluna], ' | ');
+            }
+        }
+    document.write('<br><br>')
+    // percorre coluna da matriz
+    for (const coluna of matriz) {
+        document.write(`${coluna[0]} ${coluna[1]} ${coluna[2]}<br>`)
+    }
+    document.write('<br>')
+    // percorre linha da matriz
+    for (const linha of matriz) {
+        document.write(`${linha}<br>`)
+    }
+
+    
+
+    
+    </script>
+</body>
+</html>

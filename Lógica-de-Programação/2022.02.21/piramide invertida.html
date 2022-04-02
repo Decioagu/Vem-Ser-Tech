@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pirâmide invertida</title>
+</head>
+<body>
+    <h1>PIRÂMIDE INVERTIDA</h1>
+    <script>
+        let quant = 17
+        // 3º quantidade de linhas na pirâmide "(let linha = 11; linha < 20) <=> 20-11 = 9 linhas"
+        for (let linha = 11; linha < 20; linha++) { 
+            // 2º afastamento da borda de 0 até "let linha = 11"
+            for (let cont = 0; cont < linha; cont++) {
+                document.write('&nbsp;&nbsp;') // 2 espaços
+            }
+            document.write('*')
+            // 1º gera 19 repetições
+            for (var j = 0; j < quant; j++){
+                document.write("=")
+            }
+            document.write('*')
+            quant -= 2 // subtrai "let quant" 
+            document.write("<br>") 
+        }
+        // afasta linha 10 
+        for (let linha = 0; linha < 20; linha++) {
+            document.write('&nbsp;&nbsp;') // 2 espaços
+        }
+        document.write('*') // "linha 10" uma linha adicional na pirâmide      
+    </script>
+</body>
+</html>

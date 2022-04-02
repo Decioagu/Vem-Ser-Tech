@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriz</title>
+</head>
+<body>
+    <h1>MATRIZ</h1>
+    <script>
+        const matriz = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+        document.write('<br><br>')
+        document.write(matriz)
+        document.write('<br><br>')
+        document.write(matriz[0]); // [1, 2, 3]
+        document.write('<br>')
+        document.write(matriz[1]); // [4, 5, 6]
+        document.write('<br>')
+        document.write(matriz[2]); // [7, 8, 9]
+        document.write('<br><br>')
+        document.write(matriz[0][0],' - '); // 1
+        document.write(matriz[0][1],' - '); // 2
+        document.write(matriz[0][2],' - '); // 3
+        document.write(matriz[1][0],' - '); // 4
+        document.write(matriz[1][1],' - '); // 5
+        document.write(matriz[1][2],' - '); // 6
+        document.write(matriz[2][0],' - '); // 7
+        document.write(matriz[2][1],' - '); // 8
+        document.write(matriz[2][2]); // 9
+        document.write('<br><br>')
+        for(let lista = 0; lista < matriz.length; lista++){
+            for(let coluna = 0; coluna < matriz[lista].length; coluna++){
+                document.write(matriz[lista][coluna], ' | ');
+            }
+        }
+        document.write('<br>')
+        const tabela = [
+            [1, 2, 3],
+            [4, 5, 6, 7],
+            [8, 9, 10, 11, 12]
+        ];
+        document.write('<br>')
+        for(let lista = 0; lista < tabela.length; lista++){
+            for(let coluna = 0; coluna < tabela[lista].length; coluna++){
+                document.write(tabela[lista][coluna], ' / ');
+            }
+        }
+       
+    </script>
+</body>
+</html>

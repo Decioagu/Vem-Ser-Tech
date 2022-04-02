@@ -8,7 +8,7 @@ console.log(aluno, nota);
 let resp = null
 
 //processamento = 1
-/* if (nota >= 6) {
+if (nota >= 6) {
     resp = "Aprovado!"
 }
 if (6 > nota && nota >= 4){
@@ -16,16 +16,16 @@ if (6 > nota && nota >= 4){
 }
 if ( nota < 4 ){
     resp = "Reprovado!"
-} */
+}
 
 //processamento = 2
-if (nota >= 6) {
+/* if (nota >= 6) {
     resp = "Aprovado!"
 } else if (nota < 4){
     resp = "Reprovado!"
 } else { 
     resp = "Recuperação!"
-}
+    } */
 
 let op = prompt("Quer continuar [s/n]?")
 

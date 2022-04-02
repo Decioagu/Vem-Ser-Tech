@@ -95,6 +95,7 @@ class Conta {
         lancamentos.push(transacao);
     }
 
+     
     // método 
     transferir (valorDaTranferencia, contaDaTransferencia = '') {
         if(contaDaTransferencia.length != 0){
@@ -120,7 +121,23 @@ class Conta {
         let transacao = this.geraDados(this.nome, "Transferência", valorDaTranferencia)
         // armazenar resgistro no Array de "lancamentos"
         lancamentos.push(transacao);
-    }
+    } 
+    
+
+    /* transferir (valor, Conta) {
+        if(this.#saldo >= valor){
+            this.sacar(valor);
+            Conta.depositar(valor);
+
+            let transacao = this.geraDados(this.nome, "Transferência", valor)
+
+            lancamentos.push(transacao);
+
+        } else {
+            console.log(`Saldo insuficiente, transferencia não efetuada!`)
+        }
+
+    } */
     
     // método 
     pagar (valorBoleto, dataVencimento = 0) {
@@ -188,6 +205,27 @@ class Conta {
         // armazenar resgistro no Array de "lancamentos"
         lancamentos.push(transacao);
     }
+
+    lis (){
+        const leasing = prompt("você quer um cheque especial ?[S/N]")
+        switch (leasing) {
+            case "S":
+                if (pF){
+                    console.log(``)
+                } else{}
+                break;
+                
+            case "N":
+                console.log(``)
+                break;
+        
+            default:
+                console.log("Apenas [S/N]")
+                lis ()
+                break;
+        }
+    }
+    
 }
 
 // classe "Filho"

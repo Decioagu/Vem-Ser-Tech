@@ -26,7 +26,7 @@
     <h1>LOJA DE CARROS</h1>
 
     <label for="">Modelo:</label>
-    <input type="text" id="modelo">
+    <input type="text" id="modelo" autofocus>
 
     <br><br>
 
@@ -70,19 +70,19 @@
         let soma = 0;
         function adicionar() {
             //entrada
-            const modelo = (document.getElementById("modelo").value == '')?'Não cadastro':document.getElementById('modelo');
-            const ano = (document.getElementById("ano").value == '')?'Não cadastro':document.getElementById('ano');
-            const cor = document.getElementById("cor");
-            const situação = document.getElementById("situação");
+            const modelo = (document.getElementById("modelo").value == '')?'Não cadastro':document.getElementById('modelo').value;
+            const ano = (document.getElementById("ano").value == '')?'Não cadastro':document.getElementById('ano').value;
+            const cor = document.getElementById("cor").value;
+            const situação = document.getElementById("situação").value;
 
             console.log(modelo.value, ano.value, cor, situação)
             
             //processamento
             const carro = { //Objeto "carro"
-                modelo: modelo.value,
-                ano: ano.value,
-                cor: cor.value,
-                situação: situação.value
+                modelo: modelo,
+                ano: ano,
+                cor: cor,
+                situação: situação
             }
             carros.push(carro);// Objeto "carro" será salvo no Array "Carros" 
 
@@ -91,17 +91,21 @@
 
             const tabela = document.getElementById('tabela');
             
-
-            
-            tabela.innerHTML = carros.map(function (valor) {    
-                valor = `<tr>
+            tabela.innerHTML = carros.map(valor => {    
+                lista = `<tr>
                     <th>${valor.modelo}</th>
                     <th>${valor.ano}</th>
-                    <th>${valor.cor}</th>
+                    <td style="background-color: ${valor.cor};"></td>
                     <th>${valor.situação}</th>
                 </tr>`
-                return valor
+                return lista
             }).join('')
+
+            document.getElementById('modelo').value = '';
+            document.getElementById('ano').value = '';
+            document.getElementById("cor").value = '';
+            document.getElementById("situação").value = 'novo';
+            document.getElementById("situação").focus();
                 
         }
 

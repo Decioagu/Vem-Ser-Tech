@@ -38,10 +38,14 @@
                 console.log(soma)
             } else { alert('Prencha o campo abaixo para prossegui');}
 
+            const lista = document.getElementById('lista')
+
             if (soma == 3){
-                document.getElementById('lista').innerHTML = carros
-                //document.getElementById('lista').innerHTML = carros.map(elemento=> `${elemento}<br>`);                
+                lista.innerHTML = carros.map(elemento=> `${elemento}<br>`).join('')
+                soma = 0;
+                carros = []          
             }
+            
         }
 
     </script>

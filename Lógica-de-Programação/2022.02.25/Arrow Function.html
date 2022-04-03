@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+<body>
+    <h1>ARROW FUNCITION</h1>
+    <script>
+        // função
+        
+        const hello1 = function() {
+            return "Hello World!";
+        }
+        document.write(hello1())
+        document.write('<br><br>')
+
+        // Arrow Function
+        const hello2 = () => {
+            return "Hello World!";
+        }
+        document.write(hello2())
+        document.write('<br><br>')
+
+        // Arrow Function
+        const hello3 = () => "Hello World!";
+        document.write(hello3())
+        document.write('<br><br>')
+
+        // Arrow Function
+        const soma = (n1,n2) => {
+        return n1+n2;
+        }
+        document.write(soma(1,2))
+        document.write('<br><br>')
+
+        // // Arrow Function se tiver uma unica instrução, sem uso de "return" <=> retorno implicito
+        const multiplicacao = (n1,n2) => n1 * n2; 
+        document.write(multiplicacao(2,2))
+        document.write('<br><br>')
+
+                // Funcionamento do This
+        const carro1 = { 
+        modelo: "HB20",
+        marca: "hyundai",
+        nomeCompleto: function() {
+            return `${this.modelo} ${this.marca}`
+        }
+        }
+        document.write(carro1.nomeCompleto())
+        document.write('<br><br>')
+
+        // Arrow Function não funciona "this" 
+        const carro2 = { 
+        modelo: "HB20",
+        marca: "hyundai",
+        nomeCompleto: () => {`${this.modelo} ${this.marca}`}
+        }
+        document.write(carro2.nomeCompleto())
+        ocument.write('<br><br>')
+
+        // Arrow Function
+        const cores = ['verde', 'amarelo', 'rosa', 'azul', 'preto']
+        cores.forEach((nome, posição) => document.write(`cor: ${nome} na posição => ${posição}<br>`));
+        ocument.write('<br><br>')
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reduce</title>
+</head>
+<body>
+    <h1>REDUCE</h1>
+    <script>
+        let numeros = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+        document.write(numeros)
+        document.write('<br><br>')
+        // array.reduce(função(número anterior, número atual, posição, array))
+        numeros.reduce(function (anterior, atual) { console.log(anterior, atual)})// inicia com 1º elemento
+        console.log('//==========//==========//')
+        numeros.reduce(function (anterior, atual) { console.log(anterior, atual)},0)// inicia com 0
+        console.log('//==========//==========//')
+        document.write("Soma dos valores = "+ numeros.reduce(function (anterior, atual) { console.log(anterior, atual)
+            return anterior + atual
+        }))
+        document.write('<br><br>')
+        console.log('//==========//==========//')
+        document.write("Soma dos valores = "+ numeros.reduce(function (anterior, atual) {  
+            console.log(atual)   
+            return (anterior + atual) + 1
+        },0))
+        document.write('<br><br>')
+        console.log('//==========//==========//')
+        document.write("Soma dos valores + 50 = "+ numeros.reduce(function (anterior, atual) { console.log(anterior, atual)
+            return anterior + atual
+        },50))
+        document.write('<br><br>')
+        console.log('//==========//==========//')
+        document.write("Dobra dos valores = "+ numeros.reduce(function (anterior, atual) {  
+            console.log(anterior, atual)
+            anterior.push(atual * 2)  
+            return anterior
+        }, [0]))     
+    </script>
+    
+</body>
+</html>

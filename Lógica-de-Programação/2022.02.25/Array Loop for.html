@@ -18,6 +18,13 @@
         const element = cores[index];
         document.write(`${element}<br>`)
     }
+
+    document.write('<br>')
+    // percorre linha da matriz
+    for (let linha in cores) {
+        document.write(`${cores[linha]} | `)
+    }
+
     document.write('<br><br>')
 
     
@@ -42,13 +49,19 @@
         }
     document.write('<br><br>')
     // percorre coluna da matriz
-    for (const coluna of matriz) {
+    for (let coluna of matriz) {
         document.write(`${coluna[0]} ${coluna[1]} ${coluna[2]}<br>`)
     }
     document.write('<br>')
     // percorre linha da matriz
-    for (const linha of matriz) {
+    for (let linha of matriz) {
         document.write(`${linha}<br>`)
+    }
+
+    document.write('<br>')
+    // percorre linha da matriz
+    for (let linha in matriz) {
+        document.write(`${matriz[linha]}<br>`)
     }
 
     

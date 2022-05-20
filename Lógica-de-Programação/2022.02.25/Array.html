@@ -19,7 +19,11 @@
 
         const carros = ['Gol', 'Corsa', 'Fox'];
         console.log(carros);
-        console.log(carros.length);
+        console.log(carros.length);  // retorna o tamanho do vetor
+        console.log(carros.indexOf('Gol')); // retorna posição do valor solicitado, se não hover retorna -1
+        console.log(carros.indexOf('Goll')); // retorna posição do valor solicitado, se não hover retorna -1
+
+
         carros[1] = 'Santana' // substitui elemento na posição especifica do "Array"
         console.log(carros);
         console.log(carros[1]); // mostra um elemento do "Array" 
@@ -50,8 +54,7 @@
         console.log(carros);
         carros.reverse(); // inverte a ordem dentro do "Array"
         console.log(carros);
-        carros.reverse(); // inverte a ordem dentro do "Array"
-        console.log(carros);   
+          
 
         let fruta = 'banana' // String
         console.log(fruta);
@@ -65,6 +68,10 @@
         console.log(fruta);
         fruta = fruta.join(''); // .join("parametro para união") <=> transforma "Array" em uma String
         console.log(fruta);
+
+        let y = [3, 100, 200, 900, 1000, 55, 1, 8]
+        y.sort()
+        console.log(y)
     </script>
     
 </body>

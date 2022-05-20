@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>forEach filter map find</title>
+</head>
+<body>
+    <h1>forEach / filter / map / find</h1>
+
+    <script>
+        const num = [10, 20, 30, 40, 50, 60]
+        document.write('//========================== forEach ==========================//')
+        document.write('<br>')
+        // percorre o Array
+        num.forEach(function(valor, index, array){ 
+            document.write(valor, ' <=> ')
+            document.write(index, ' <=> ')
+            document.write(array)
+            document.write('<br>')
+        })
+        document.write('//========================== filter ==========================//')
+        document.write('<br>')
+        // percorre o Array
+        num.filter(function(valor, index, array){ 
+            document.write(valor, ' <=> ')
+            document.write(index, ' <=> ')
+            document.write(array)
+            document.write('<br>')
+        })
+        document.write('//========================== map ==========================//')
+        document.write('<br>')
+        // percorre o Array
+        num.map(function(valor, index, array){ 
+            document.write(valor, ' <=> ')
+            document.write(index, ' <=> ')
+            document.write(array)
+            document.write('<br>')
+        })
+        document.write('//========================== find ==========================//')
+        document.write('<br>')
+        // percorre o Array
+        num.find(function(valor, index, array){ 
+            document.write(valor, ' <=> ')
+            document.write(index, ' <=> ')
+            document.write(array)
+            document.write('<br>')
+        })
+        document.write('<br>')
+        document.write('//==========================01==========================//')
+        document.write('<br>')
+        document.write('<br>')
+        // percorre o Array
+        num.forEach((valor) => {if (valor>=40){document.write(valor, ' - ')}})
+        document.write('(forEach)')
+        document.write('<br>')
+        // percorre o Array
+        num.filter((valor) => {if (valor>=40){document.write(valor, ' - ')}})
+        document.write('(filter)')
+        document.write('<br>')
+        // percorre o Array
+        num.map((valor) => {if (valor>=40){document.write(valor, ' - ')}})
+        document.write('(map)')
+        document.write('<br>')
+        // percorre o Array
+        num.find((valor) => {if (valor>=40){document.write(valor, ' - ')}})
+        document.write('(find)')
+        document.write('<br>')
+        document.write('<br>')
+        document.write('//==========================02==========================//')
+        document.write('<br>')
+        document.write('<br>')
+        // "return" = Vazio
+        document.write(num.forEach((valor) => valor > 30))
+        document.write(' - (forEach)')
+        document.write('<br>')
+        // "return" = Devolve novo Array conforme argumento da função
+        document.write(num.filter((valor) => valor > 30))
+        document.write(' - (filter)')
+        document.write('<br>')
+        // "return" = Substitui valor do Array conforme argumento da função
+        document.write(num.map((valor) => valor > 30))
+        document.write(' - (map)')
+        document.write('<br>')
+        // "return" = Substitui valor do Array conforme argumento da função
+        document.write(num.find((valor) => valor > 30))
+        document.write(' - (find)')
+        document.write('<br>')
+        document.write('<br>')
+        document.write('//==========================03==========================//')
+        document.write('<br>')
+        document.write('<br>')
+        // "return" = Vazio
+        const x = num.forEach((valor) => valor == 40)
+        document.write(x)
+        document.write(' - (forEach)')
+        document.write('<br>')
+        // "return" = Devolve novo Array conforme argumento da função
+        const y = num.filter((valor) => valor == 40)
+        document.write(y)
+        document.write(' - (filter)')
+        document.write('<br>')
+        // "return" = Substitui valor do Array conforme argumento da função
+        const z = num.map((valor) => valor == 40)
+        document.write(z)
+        document.write(' - (map)')
+        document.write('<br>')
+        // "return" = Substitui valor do Array conforme argumento da função
+        const w = num.find((valor) => valor == 40)
+        document.write(w)
+        document.write(' - (find)')
+        document.write('<br>')
+        document.write('<br>')
+        document.write('//==========================//==========================//')
+        document.write('<br>')
+        document.write('<br>')
+    </script>   
+</body>
+</html>

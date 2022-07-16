@@ -66,7 +66,7 @@ Aninhamento de um nível:
 .classe-inventada > div { ... estilo ... }
 Selecionará toda e qualquer div diretamente dentro de todo e qualquer > elemento com classe classe-inventada.
 
-Múltiplos seletores, um estilo:
+Múltiplos seletoresposta, um estilo:
 .classe-inventada, div { ... estilo ... }
 Selecionará todas as div e todos os elementos com class="classe-inventada"
 */

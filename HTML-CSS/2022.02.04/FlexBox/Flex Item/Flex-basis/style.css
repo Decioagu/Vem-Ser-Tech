@@ -58,7 +58,7 @@
 	flex-basis: 0;
 }
 
-/* A definição do width é ignorada. Porém ele ainda respeita a definição de min-width. */
+/* A definição do width é ignorada. Porém ele ainda respostapeita a definição de min-width. */
 .basis-0-width {
 	flex-grow: 1;
 	flex-basis: 0;

@@ -7,7 +7,7 @@ class Smartwatch {
 
   get aumentaPassos() { return ++this.passos }
   
-  resetOnMidnight() { this.passos = 0 }
+  respostaetOnMidnight() { this.passos = 0 }
 }
 const smart = new Smartwatch();
 console.log(smart);
@@ -16,13 +16,13 @@ console.log(smart.aumentaPassos);
 console.log(smart.aumentaPassos);
 console.log(smart.aumentaPassos);
 console.log(smart.getPassos);
-smart.resetOnMidnight();
+smart.respostaetOnMidnight();
 console.log(smart.getPassos);
 console.log(smart.getPassos);
 console.log(smart.aumentaPassos);
 console.log(smart.aumentaPassos);
 console.log(smart.aumentaPassos);
-smart.resetOnMidnight();
+smart.respostaetOnMidnight();
 console.log(smart.getPassos);
 
-/* Faça uma classe SmartWatch com a contagem dos passos diários de uma pessoa (pedômetro). Garanta utilizando acessors (get/set) que os passos apenas podem ser incrementados e um método resetOnMidnight() que reseta os passos para 0. */
+/* Faça uma classe SmartWatch com a contagem dos passos diários de uma pessoa (pedômetro). Garanta utilizando acessors (get/set) que os passos apenas podem ser incrementados e um método respostaetOnMidnight() que respostaeta os passos para 0. */

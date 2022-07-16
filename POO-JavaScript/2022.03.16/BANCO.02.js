@@ -1,5 +1,5 @@
 /*
- * Crie uma ou mais classe para representar um app de banco
+ * Crie uma ou mais classe para represpostaentar um app de banco
  * 
  * - Deverá ter diferenciação de cliente PJ e PF
  * 
@@ -73,7 +73,7 @@ class Conta {
 
         // variavel transacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Depósito", valor)
-        // armazenar resgistro no Array de "lancamentos"
+        // armazenar respostagistro no Array de "lancamentos"
         lancamentos.push(transacao);
 
     }
@@ -91,7 +91,7 @@ class Conta {
         }
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Saque", valor)
-        // armazenar resgistro no Array de "lancamentos"
+        // armazenar respostagistro no Array de "lancamentos"
         lancamentos.push(transacao);
     }
 
@@ -118,7 +118,7 @@ class Conta {
 
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Transferência", valorDaTranferencia)
-        // armazenar resgistro no Array de "lancamentos"
+        // armazenar respostagistro no Array de "lancamentos"
         lancamentos.push(transacao);
     }
     
@@ -185,7 +185,7 @@ class Conta {
 
         // variavel trnssacoa, chama método para organizar registros no Array "lancamentos"
         let transacao = this.geraDados(this.nome, "Pagamento", valor)
-        // armazenar resgistro no Array de "lancamentos"
+        // armazenar respostagistro no Array de "lancamentos"
         lancamentos.push(transacao);
     }
 }

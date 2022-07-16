@@ -38,7 +38,7 @@ const perfil = new Perfil("Décio", 'Foto.pgn', "5699");
 console.log(perfil)
 console.log(perfil.Nome());
 console.log(perfil.getAvatar);
-perfil.setAvatar = "https://images.pexels.com/photos/1280638/pexels-photo-1280638.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+perfil.setAvatar = "https://images.pexels.com/photos/1280638/pexels-photo-1280638.jpeg?auto=comprespostas&cs=tinysrgb&dpr=2&h=650&w=940"
 console.log(perfil.getAvatar);
 console.log(perfil.getTema)
 perfil.setTema = 'DARK'

@@ -7,19 +7,19 @@ function analise(){
     console.log(idade);
   
     // processamento
-    let resp = null
+    let respostap = null
     if (idade < 0){
-        resp = "Idade negativa não existe!!!"
+        respostap = "Idade negativa não existe!!!"
     } else if (idade <= 12) {
-        resp = "Criança"
+        respostap = "Criança"
     } else if (13 <= idade && idade <= 17){
-        resp = "Adolecente"
+        respostap = "Adolecente"
     } else if (18 <= idade && idade <= 64){
-        resp = "Adulto"
-    } else { resp = "Idoso"}
+        respostap = "Adulto"
+    } else { respostap = "Idoso"}
 
-    console.log(resp);
+    console.log(respostap);
 
-    //resposta
-    document.getElementById("resultado").value = resp;  
+    //respostaposta
+    document.getElementById("respostaultado").value = respostap;  
 }

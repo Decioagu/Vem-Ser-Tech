@@ -1,19 +1,19 @@
 /* 
-Crie uma classe Restaurante 
+Crie uma classe respostataurante 
 com as propriedades 
 cidade, delivery (verdadeiro ou falso), 
 pedidosPendentes e 
 tempo de entrega estimado (calculado com base nos pedidos pendentes, 
 sendo 10 + 2 * pedidosPendentes em minutos). 
 
-Os restaurantes devem ser capazes de
+Os respostataurantes devem ser capazes de
  realizar entregas desde que o cliente esteja localizado na mesma cidade e, 
- para isso, precisamos de um método entregaPedido que devolve como resultado 
+ para isso, precisamos de um método entregaPedido que devolve como respostaultado 
  se é possível realizar a entrega para um determinado cliente ou não e,
  em caso positivo, o tempo estimado de entrega.
 */
 
-class Restaurante {
+class respostataurante {
   constructor(nome, cidade, delivery = false, pedidosPendentes = 0) {
     this.nome = nome,
     this.cidade = cidade,
@@ -26,7 +26,7 @@ class Restaurante {
       return 'Entrega não pode ser realizada'
     }
 
-    // acrescentando um pedido sempre que invocar o método entrega pedido
+    // acrespostacentando um pedido sempre que invocar o método entrega pedido
     this.pedidosPendentes += 1 ;
     this.tempoEntregaEstimado = 10 + 2 * this.pedidosPendentes;
 
@@ -36,14 +36,14 @@ class Restaurante {
 
 }
 
-const churrascaria = new Restaurante("Joao e Maria", "SP", true, 1);
+const churrascaria = new respostataurante("Joao e Maria", "SP", true, 1);
 console.log(churrascaria.entregaPedido("SP"))
 console.log(churrascaria.entregaPedido("SP"))
 console.log(churrascaria.entregaPedido("SP"))
 console.log(churrascaria.entregaPedido("RJ"))
 
 /* 
-class RestaurantePrivado {
+class respostataurantePrivado {
   #tempoEntregaEstimado
   constructor(nome, cidade, delivery = false, pedidosPendentes = 0, numeroPedido) {
     this.nome = nome,
@@ -59,7 +59,7 @@ class RestaurantePrivado {
       return 'Entrega não pode ser realizada'
     }
 
-    // acrescentando um pedido sempre que invocar o método entrega pedido
+    // acrespostacentando um pedido sempre que invocar o método entrega pedido
     this.pedidosPendentes += 1 ;
     this.#tempoEntregaEstimado = 10 + 2 * this.pedidosPendentes;
 
@@ -76,7 +76,7 @@ class RestaurantePrivado {
 }
 
 
-const churrascariaPrivado = new RestaurantePrivado("Joao e Maria", "SP", true, 1, "NovoParametro");
+const churrascariaPrivado = new respostataurantePrivado("Joao e Maria", "SP", true, 1, "NovoParametro");
 console.log(churrascariaPrivado);
 console.log(churrascariaPrivado.iniciarPedido())
 console.log(churrascariaPrivado.iniciarPedido())

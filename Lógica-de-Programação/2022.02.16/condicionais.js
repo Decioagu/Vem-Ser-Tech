@@ -5,37 +5,37 @@ const aluno = prompt("Digite o neome do aluno:");
 const nota = prompt("Digite a nota (0-10):");
 console.log(aluno, nota);
 
-let resp = null
+let respostap = null
 
 //processamento = 1
 if (nota >= 6) {
-    resp = "Aprovado!"
+    respostap = "Aprovado!"
 }
 if (6 > nota && nota >= 4){
-    resp = "Recuperação!"
+    respostap = "Recuperação!"
 }
 if ( nota < 4 ){
-    resp = "Reprovado!"
+    respostap = "Reprovado!"
 }
 
 //processamento = 2
 /* if (nota >= 6) {
-    resp = "Aprovado!"
+    respostap = "Aprovado!"
 } else if (nota < 4){
-    resp = "Reprovado!"
+    respostap = "Reprovado!"
 } else { 
-    resp = "Recuperação!"
+    respostap = "Recuperação!"
     } */
 
 let op = prompt("Quer continuar [s/n]?")
 
 //processamento = 3
 
-console.log(resp)
+console.log(respostap)
 
 // saída
 document.write(`
     Aluno: ${aluno} <br>
     Nota: ${nota} <br>
-    Situação: ${resp} <br>
+    Situação: ${respostap} <br>
 `)

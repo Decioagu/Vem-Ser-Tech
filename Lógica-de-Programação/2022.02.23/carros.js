@@ -53,11 +53,11 @@ function atualiza_pagina() {
 }
 
 function valor_total() {
-    valores = [];
-    carros.forEach( carro => valores.push(carro.preco));
+    valoresposta = [];
+    carros.forEach( carro => valoresposta.push(carro.preco));
     
     document.getElementById("valor_carros").textContent = moeda.format(
-        valores.reduce(
+        valoresposta.reduce(
             function (total, atual) {
                 return total += atual;
             }

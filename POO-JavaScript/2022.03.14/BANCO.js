@@ -65,14 +65,14 @@ class PF extends Conta{
 class PJ extends PF{
     #CNPJ // propriedade privada
     // função construtora
-    constructor(nome, CPF, conta, agencia, saldo, CNPJ = 'Sem Cadastro', empresa = 'Sem Cadastro'){
+    constructor(nome, CPF, conta, agencia, saldo, CNPJ = 'Sem Cadastro', emprespostaa = 'Sem Cadastro'){
         super (nome, CPF, conta, agencia, saldo)
         this.#CNPJ = CNPJ;
-        this.empresa = empresa;
+        this.emprespostaa = emprespostaa;
     }
     // método dados de pessoa Jurídica
     get dadosPj(){
-        return `Seu nome é ${this.nome}, do CPF ${this.CPF}, sua conta é ${this.conta} e agência ${this.agencia}, CNPJ ${this.#CNPJ} e empresa ${this.empresa}`
+        return `Seu nome é ${this.nome}, do CPF ${this.CPF}, sua conta é ${this.conta} e agência ${this.agencia}, CNPJ ${this.#CNPJ} e emprespostaa ${this.emprespostaa}`
     }
 
     // acesso individual a propriedade privada "CNPJ"
@@ -114,5 +114,5 @@ console.log(Santana.saldo)
 Santana.deposito = 100;
 console.log(Santana.saldo)
 console.log(Santana.dadosPf)
-console.log(Santana.dadosPj) // teste sem retorno "CNPJ" e "empresa"
+console.log(Santana.dadosPj) // teste sem retorno "CNPJ" e "emprespostaa"
 

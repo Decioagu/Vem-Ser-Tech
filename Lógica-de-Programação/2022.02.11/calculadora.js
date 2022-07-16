@@ -15,6 +15,6 @@ function calcular(){
     /* saida de dados na tela do usuário */
     if (num1.length == 0 || num2.length == 0){
         alert('Favor prencer os canpos "1º número" e "2º número"')
-    } else { document.getElementById("resultado").value = total; }
+    } else { document.getElementById("respostaultado").value = total; }
       
 }

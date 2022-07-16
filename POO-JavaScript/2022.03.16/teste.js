@@ -1,5 +1,5 @@
 /**
- * Crie uma ou mais classe para representar um app de banco
+ * Crie uma ou mais classe para represpostaentar um app de banco
  * 
  * - Deverá ter diferenciação de cliente PJ e PF
  * 

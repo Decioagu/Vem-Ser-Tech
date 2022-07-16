@@ -32,8 +32,8 @@ class Pessoa {
         this.email = email,
         this.idade = idade
     }
-    // retorno da class pelo método "get resposta"
-    get resposta() {
+    // retorno da class pelo método "get respostaposta"
+    get respostaposta() {
         return ("Nome da pessoa: " + this.nome + ", idade da pessoa " + this.idade);
     }
 }
@@ -43,7 +43,7 @@ let vini = new Pessoa("Vinicius", "vinicius@letscode.com.br", 20);
 
 // mostra conteudo da class "Pessoa"
 console.log(Pessoa)
-// retorna método "get resposta" dentro da class "Pessoa"
-console.log(vini.resposta)
+// retorna método "get respostaposta" dentro da class "Pessoa"
+console.log(vini.respostaposta)
 
 console.log('//===========================//========================//') 

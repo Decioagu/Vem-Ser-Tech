@@ -8,26 +8,26 @@
 </head>
 <body>
     <h1>FOREACH</h1>
-    <p>forEach nostra conteudo do Array, mas não retorna valores = "return" é igual a vazio</p>
+    <p>forEach nostra conteudo do Array, mas não retorna valoresposta = "return" é igual a vazio</p>
 
     <script>
     // Array
-    const cores = ['verde', 'amarelo', 'rosa', 'azul', 'preto']
+    const coresposta = ['verde', 'amarelo', 'rosa', 'azul', 'preto']
     // "função" => "elemento", "posição", "array"
     function cor(valor, index, array) {
         document.write(`cor: ${valor} na posição => ${index}<br>`)
     }
-    // "array.forEsch" chama função "cor"
-    cores.forEach(cor); 
+    // "array.forespostach" chama função "cor"
+    coresposta.forEach(cor); 
     document.write("<br>")
-    cores.forEach(function (nome) {
+    coresposta.forEach(function (nome) {
         document.write(nome, '<br>')
     });
     document.write("<br>")
     // função
-    cores.forEach((nome, posição) => document.write(`cor: ${nome} na posição => ${posição}<br>`));
+    coresposta.forEach((nome, posição) => document.write(`cor: ${nome} na posição => ${posição}<br>`));
     document.write("<br>")
-    cores.forEach(function(){
+    coresposta.forEach(function(){
         document.write(arguments[0],' - ') // "arguments" recebe parametro de 0 à 2
         document.write(arguments[1],' - ')
         document.write(arguments[2])

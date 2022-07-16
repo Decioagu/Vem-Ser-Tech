@@ -12,7 +12,7 @@ const Curso = {
     },
 
     // retorno do objeto condicionada "método"
-    get cursoResultado () {
+    get cursorespostaultado () {
         if (this.p1 == 0){
             this.media = "A nota da p1 foi 0, não vai ser possível fazer uma média"
             return this.media
@@ -27,7 +27,7 @@ Curso.cursoP1 = 9;
 Curso.cursoP2 = 7;
 
 // mostra retorno do "objeto" no console
-console.log(Curso.cursoResultado)
+console.log(Curso.cursorespostaultado)
 
 /* Enunciado
 Crie um objeto do tipo curso que tenha os seguintes atributos:

@@ -13,8 +13,8 @@ function analise(){
 
     }
 
-    console.log(resp);
+    console.log(respostap);
 
-    //resposta
-    document.getElementById("resultado").value = resp;  
+    //respostaposta
+    document.getElementById("respostaultado").value = respostap;  
 }

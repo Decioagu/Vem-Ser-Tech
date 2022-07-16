@@ -4,7 +4,7 @@ class Pessoa {
     this.nome = nome,
     this.idade = idade
   }
-  apresentar() {
+  aprespostaentar() {
     return `O meu nome é ${this.nome}
     e tenho ${this.idade} anos.`
   }
@@ -13,7 +13,7 @@ class Pessoa {
 // instanciar a classe pessoa
 const p1 = new Pessoa("Jaque", 28);
 console.log(p1);
-console.log(p1.apresentar());
+console.log(p1.aprespostaentar());
 console.log(p1.nome);
 console.log(JSON.stringify(p1));
 console.log(Object.keys(p1));
@@ -39,10 +39,10 @@ class PessoaPrivada {
   set Nome(u) {
     this.#nome = u
   }
-  apresentar() {
+  aprespostaentar() {
     return `O meu nome é ${this.#nome} e tenho ${this.#idade} anos.`
   }
-  // para resolver o caso do Json
+  // para respostaolver o caso do Json
   toJSON() {
     return {
       nome: this.nome, // ACESSANDO ATRAVES DO GETTER
@@ -61,7 +61,7 @@ const p2 = new PessoaPrivada("Joao", 28, 'joao@letscode.com.br');
 console.log(p2);
 console.log(p2.nome) // chamada feita diretamente pelo propriedade (privado)
 console.log(p2.email); // chamada feita diretamente pelo propriedade
-console.log(p2.apresentar()); // chamada feita pelo médoto "apresentar" dentro da "class PessoaPrivada"
+console.log(p2.aprespostaentar()); // chamada feita pelo médoto "aprespostaentar" dentro da "class PessoaPrivada"
 console.log(p2.Nome); // chamada foi feita do método "get"
 p2.Nome = "Décio" // instanciando novo atributo pelo método "set" (privado)
 console.log(p2.Nome); // chamada foi feita do método "get"

@@ -8,9 +8,9 @@ function comparacao(){
     console.log(num1, num2);
 
     /* converter string para número "parseInt" ou parseFloat */
-    const result = num1 > num2;
-    console.log(result);
+    const respostault = num1 > num2;
+    console.log(respostault);
 
     /* saida de dados na tela do usuário */
-    document.getElementById("resultado").value = result;  
+    document.getElementById("respostaultado").value = respostault;  
 }

@@ -18,7 +18,7 @@ function custo(){
     
 
     console.log(altura.length)
-    document.getElementById("resultado").value = imc.toFixed(2);
+    document.getElementById("respostaultado").value = imc.toFixed(2);
 
     pessoa.innerHTML = 'Saúde'
 
